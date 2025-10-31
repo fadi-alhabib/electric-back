@@ -1,0 +1,1343 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "18951e90-153f-4d4f-af8d-b2b656c89ffa",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/admin\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"wyman.glennie@example.net\",\"password\":\"doloribus\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/admin\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/categories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":2,\"category_name\":\"Cable Management System\",\"description\":\"Explore our comprehensive range of cutting-edge cable management systems to streamline installation, enhance safety, and revolutionize cable organization.\",\"image\":\"category_images\\\/h7mRAL6Y8M5GZBILnCEoIfO0BUnYArYvrr1zqkXZ.png\",\"created_at\":\"2024-09-24T03:44:48.000000Z\",\"updated_at\":\"2024-09-24T03:44:48.000000Z\"},{\"id\":3,\"category_name\":\"Structural Support Systems\",\"description\":\"Premier Manufacturer of precision C-Channel profiles and accessories providing top-quality, reliable structural solutions.\",\"image\":\"category_images\\\/zDP4tjM8PBj93wa9eiK8UZ0bZoQZqtAejZhxqHBj.png\",\"created_at\":\"2024-09-24T03:46:00.000000Z\",\"updated_at\":\"2024-09-24T03:46:00.000000Z\"},{\"id\":4,\"category_name\":\"Cable Fasteners\",\"description\":\"Introducing our top-quality cable fasteners for efficient and secure cable management solutions.\",\"image\":\"category_images\\\/y1ViwrOZPLzbEtepVpyjwP7LYzEEfPcQadFsDeBx.png\",\"created_at\":\"2024-09-24T03:46:45.000000Z\",\"updated_at\":\"2024-09-24T03:46:45.000000Z\"},{\"id\":5,\"category_name\":\"Different Types of Rollers\",\"description\":\"Explore our high-quality cable and pipe rollers designed for various industrial needs.\",\"image\":\"category_images\\\/vPY3EOWBpNCc0FhYZoTvapDMT15WDJOg8fgEbdiS.png\",\"created_at\":\"2024-09-24T03:47:40.000000Z\",\"updated_at\":\"2024-09-24T03:47:40.000000Z\"},{\"id\":6,\"category_name\":\"Fasteners & Brackets\",\"description\":\"We carry a huge assortment of fasteners and brackets that can be used in a variety of system build or repair scenarios.\",\"image\":\"category_images\\\/mwb0BvRJHMvhH7umpo1myCDGuMkW6kNnTHWPdW4R.png\",\"created_at\":\"2024-09-24T03:49:44.000000Z\",\"updated_at\":\"2024-09-24T03:49:44.000000Z\"},{\"id\":7,\"category_name\":\"Battery Racks\\\/Cabinets\",\"description\":\"Durable and modular Battery Racks, Pedestals & Switch Boxes designed with your needs and measurements.\",\"image\":\"category_images\\\/NQdJjh3SDmkm1wOgcJpa9lFoqnG93t8cW4ZuG6XU.png\",\"created_at\":\"2024-09-24T03:51:19.000000Z\",\"updated_at\":\"2024-09-24T03:51:19.000000Z\"},{\"id\":8,\"category_name\":\"Lighting Columns\\\/Poles\",\"description\":\"Premier manufacturer of diverse pole structures and guards with precision plasma cutting tailored to meet your specific needs.\",\"image\":\"category_images\\\/HNVD2f7EFxlsMLJOsay40WQlsnkLRXjGZ0bsgATZ.png\",\"created_at\":\"2024-09-24T03:52:46.000000Z\",\"updated_at\":\"2024-09-24T03:52:46.000000Z\"},{\"id\":9,\"category_name\":\"Guards\",\"description\":\"Introducing our top-quality cable fasteners for efficient and secure cable management solutions.\",\"image\":\"category_images\\\/uC4yO7KjPVx8l7iM4a6rzs1MEPRWzIPFYsKl3CGS.png\",\"created_at\":\"2024-09-24T03:55:46.000000Z\",\"updated_at\":\"2024-09-24T03:55:46.000000Z\"}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/categories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "category_name",
+                                    "value": "n",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "Nisi explicabo tempora error consequatur voluptas.",
+                                    "type": "text",
+                                    "description": "Must not be greater than 1000 characters."
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/categories\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "2",
+                                    "description": "The ID of the category."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":2,\"category_name\":\"Cable Management System\",\"description\":\"Explore our comprehensive range of cutting-edge cable management systems to streamline installation, enhance safety, and revolutionize cable organization.\",\"image\":\"category_images\\\/h7mRAL6Y8M5GZBILnCEoIfO0BUnYArYvrr1zqkXZ.png\",\"created_at\":\"2024-09-24T03:44:48.000000Z\",\"updated_at\":\"2024-09-24T03:44:48.000000Z\",\"product_lines\":[{\"id\":1,\"category_id\":2,\"name\":\"Cable Tray\",\"image\":\"product_line_images\\\/ktqxkytvXnOOOfbyB9jSjGN1kPLrCHqjj44ki6jQ.png\",\"created_at\":\"2024-10-13T10:36:42.000000Z\",\"updated_at\":\"2024-10-13T10:36:42.000000Z\",\"sub_categories\":[{\"id\":1,\"product_line_id\":1,\"name\":\"Cables\",\"created_at\":\"2024-10-13T10:44:40.000000Z\",\"updated_at\":\"2024-10-13T10:44:40.000000Z\",\"products\":[{\"id\":1,\"sub_category_id\":1,\"title\":\"product\",\"description\":\"product\",\"created_at\":\"2024-10-13T10:44:53.000000Z\",\"updated_at\":\"2024-10-13T10:44:53.000000Z\",\"image\":null}]}]},{\"id\":2,\"category_id\":2,\"name\":\"Cable Trunk\",\"image\":\"product_line_images\\\/JU4d5zep3YsC0rRTTTshHHJFdcQhPFNrd1yc1XVS.png\",\"created_at\":\"2024-10-13T11:03:14.000000Z\",\"updated_at\":\"2024-10-13T11:03:14.000000Z\",\"sub_categories\":[{\"id\":2,\"product_line_id\":2,\"name\":\"cable trunk\",\"created_at\":\"2024-10-13T11:03:30.000000Z\",\"updated_at\":\"2024-10-13T11:03:30.000000Z\",\"products\":[{\"id\":2,\"sub_category_id\":2,\"title\":\"product\",\"description\":\"product\",\"created_at\":\"2024-10-13T11:03:36.000000Z\",\"updated_at\":\"2024-10-13T11:03:36.000000Z\",\"image\":null}]}]}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/categories\/sub-categories\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories\/sub-categories\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories\/sub-categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the sub category."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":1,\"product_line_id\":1,\"name\":\"Cables\",\"created_at\":\"2024-10-13T10:44:40.000000Z\",\"updated_at\":\"2024-10-13T10:44:40.000000Z\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/categories\/product-lines\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories\/product-lines\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories\/product-lines\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product line."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":1,\"category_id\":2,\"name\":\"Cable Tray\",\"image\":\"product_line_images\\\/ktqxkytvXnOOOfbyB9jSjGN1kPLrCHqjj44ki6jQ.png\",\"created_at\":\"2024-10-13T10:36:42.000000Z\",\"updated_at\":\"2024-10-13T10:36:42.000000Z\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/categories\/product-lines\/{id}\/subcategories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories\/product-lines\/:id\/subcategories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories\/product-lines\/:id\/subcategories",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product line."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"uglwyq\",\"description\":\"Laborum et sunt voluptate quia.\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/categories\/sub-categories\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories\/sub-categories\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories\/sub-categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the sub category."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"zxcservmpzvv\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/categories\/sub-categories\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories\/sub-categories\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories\/sub-categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the sub category."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/categories\/product-lines\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories\/product-lines\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories\/product-lines\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product line."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "oeaedmsqiastnf",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/categories\/product-lines\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories\/product-lines\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories\/product-lines\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product line."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/categories\/product-lines\/{categoryId}\/subcategories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories\/product-lines\/:categoryId\/subcategories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories\/product-lines\/:categoryId\/subcategories",
+                            "variable": [
+                                {
+                                    "id": "categoryId",
+                                    "key": "categoryId",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":1,\"product_line_id\":1,\"name\":\"Cables\",\"created_at\":\"2024-10-13T10:44:40.000000Z\",\"updated_at\":\"2024-10-13T10:44:40.000000Z\",\"products\":[{\"id\":1,\"sub_category_id\":1,\"title\":\"product\",\"description\":\"product\",\"created_at\":\"2024-10-13T10:44:53.000000Z\",\"updated_at\":\"2024-10-13T10:44:53.000000Z\",\"image\":null}]}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/categories\/{categoryId}\/product-lines",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories\/:categoryId\/product-lines",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories\/:categoryId\/product-lines",
+                            "variable": [
+                                {
+                                    "id": "categoryId",
+                                    "key": "categoryId",
+                                    "value": "2",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "wyvsvmnreitampxtdwugzz",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/categories\/{categoryId}\/product-lines",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/categories\/:categoryId\/product-lines",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/categories\/:categoryId\/product-lines",
+                            "variable": [
+                                {
+                                    "id": "categoryId",
+                                    "key": "categoryId",
+                                    "value": "2",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":1,\"category_id\":2,\"name\":\"Cable Tray\",\"image\":\"product_line_images\\\/ktqxkytvXnOOOfbyB9jSjGN1kPLrCHqjj44ki6jQ.png\",\"created_at\":\"2024-10-13T10:36:42.000000Z\",\"updated_at\":\"2024-10-13T10:36:42.000000Z\"},{\"id\":2,\"category_id\":2,\"name\":\"Cable Trunk\",\"image\":\"product_line_images\\\/JU4d5zep3YsC0rRTTTshHHJFdcQhPFNrd1yc1XVS.png\",\"created_at\":\"2024-10-13T11:03:14.000000Z\",\"updated_at\":\"2024-10-13T11:03:14.000000Z\"}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/products\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "title",
+                                    "value": "naqh",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "Consequatur neque ea inventore eligendi blanditiis iste.",
+                                    "type": "text",
+                                    "description": "Must not be greater than 2000 characters."
+                                },
+                                {
+                                    "key": "images[]",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/products",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\n    \"message\": \"Server Error\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/products\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/products",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "sub_category_id",
+                                    "value": "mollitia",
+                                    "type": "text",
+                                    "description": "The <code>id<\/code> of an existing record in the sub_categories table."
+                                },
+                                {
+                                    "key": "title",
+                                    "value": "adcchtdnelg",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "Dolorum voluptatem consequatur et et voluptates maiores.",
+                                    "type": "text",
+                                    "description": "Must not be greater than 2000 characters."
+                                },
+                                {
+                                    "key": "serial_number",
+                                    "value": "sunt",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "images[]",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/products\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/footer-images",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/footer-images",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/footer-images"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/footer-images",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/footer-images",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/footer-images"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "alt_text",
+                                    "value": "eius",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/footer-images\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/footer-images\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/footer-images\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "9",
+                                    "description": "The ID of the footer image."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get all contactus entries.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/contactus",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/contactus"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Create a new contactus entry.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/contactus",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/contactus"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"uwboankadmwtrmdwijiodp\",\"email\":\"iwest@example.com\",\"subject\":\"rchjshk\",\"message\":\"et\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/whychooseus",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/whychooseus",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/whychooseus"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/whychooseus",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/whychooseus",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/whychooseus"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"uoa\",\"description\":\"Quisquam quas veritatis magnam quis.\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/whychooseus\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/whychooseus\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/whychooseus\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "animi",
+                                    "description": "The ID of the whychooseu."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

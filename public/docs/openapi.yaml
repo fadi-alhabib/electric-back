@@ -1,0 +1,1083 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/admin/login:
+    post:
+      summary: ''
+      operationId: postApiAdminLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: wyman.glennie@example.net
+                  nullable: false
+                password:
+                  type: string
+                  description: ''
+                  example: doloribus
+                  nullable: false
+              required:
+                - email
+                - password
+      security: []
+  /api/admin/logout:
+    post:
+      summary: ''
+      operationId: postApiAdminLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/categories:
+    get:
+      summary: ''
+      operationId: getApiCategories
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 2
+                    category_name: 'Cable Management System'
+                    description: 'Explore our comprehensive range of cutting-edge cable management systems to streamline installation, enhance safety, and revolutionize cable organization.'
+                    image: category_images/h7mRAL6Y8M5GZBILnCEoIfO0BUnYArYvrr1zqkXZ.png
+                    created_at: '2024-09-24T03:44:48.000000Z'
+                    updated_at: '2024-09-24T03:44:48.000000Z'
+                  -
+                    id: 3
+                    category_name: 'Structural Support Systems'
+                    description: 'Premier Manufacturer of precision C-Channel profiles and accessories providing top-quality, reliable structural solutions.'
+                    image: category_images/zDP4tjM8PBj93wa9eiK8UZ0bZoQZqtAejZhxqHBj.png
+                    created_at: '2024-09-24T03:46:00.000000Z'
+                    updated_at: '2024-09-24T03:46:00.000000Z'
+                  -
+                    id: 4
+                    category_name: 'Cable Fasteners'
+                    description: 'Introducing our top-quality cable fasteners for efficient and secure cable management solutions.'
+                    image: category_images/y1ViwrOZPLzbEtepVpyjwP7LYzEEfPcQadFsDeBx.png
+                    created_at: '2024-09-24T03:46:45.000000Z'
+                    updated_at: '2024-09-24T03:46:45.000000Z'
+                  -
+                    id: 5
+                    category_name: 'Different Types of Rollers'
+                    description: 'Explore our high-quality cable and pipe rollers designed for various industrial needs.'
+                    image: category_images/vPY3EOWBpNCc0FhYZoTvapDMT15WDJOg8fgEbdiS.png
+                    created_at: '2024-09-24T03:47:40.000000Z'
+                    updated_at: '2024-09-24T03:47:40.000000Z'
+                  -
+                    id: 6
+                    category_name: 'Fasteners & Brackets'
+                    description: 'We carry a huge assortment of fasteners and brackets that can be used in a variety of system build or repair scenarios.'
+                    image: category_images/mwb0BvRJHMvhH7umpo1myCDGuMkW6kNnTHWPdW4R.png
+                    created_at: '2024-09-24T03:49:44.000000Z'
+                    updated_at: '2024-09-24T03:49:44.000000Z'
+                  -
+                    id: 7
+                    category_name: 'Battery Racks/Cabinets'
+                    description: 'Durable and modular Battery Racks, Pedestals & Switch Boxes designed with your needs and measurements.'
+                    image: category_images/NQdJjh3SDmkm1wOgcJpa9lFoqnG93t8cW4ZuG6XU.png
+                    created_at: '2024-09-24T03:51:19.000000Z'
+                    updated_at: '2024-09-24T03:51:19.000000Z'
+                  -
+                    id: 8
+                    category_name: 'Lighting Columns/Poles'
+                    description: 'Premier manufacturer of diverse pole structures and guards with precision plasma cutting tailored to meet your specific needs.'
+                    image: category_images/HNVD2f7EFxlsMLJOsay40WQlsnkLRXjGZ0bsgATZ.png
+                    created_at: '2024-09-24T03:52:46.000000Z'
+                    updated_at: '2024-09-24T03:52:46.000000Z'
+                  -
+                    id: 9
+                    category_name: Guards
+                    description: 'Introducing our top-quality cable fasteners for efficient and secure cable management solutions.'
+                    image: category_images/uC4yO7KjPVx8l7iM4a6rzs1MEPRWzIPFYsKl3CGS.png
+                    created_at: '2024-09-24T03:55:46.000000Z'
+                    updated_at: '2024-09-24T03:55:46.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiCategories
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                category_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                  nullable: false
+                description:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: 'Nisi explicabo tempora error consequatur voluptas.'
+                  nullable: true
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - category_name
+      security: []
+  '/api/categories/{id}':
+    get:
+      summary: ''
+      operationId: getApiCategoriesId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 2
+                  category_name: 'Cable Management System'
+                  description: 'Explore our comprehensive range of cutting-edge cable management systems to streamline installation, enhance safety, and revolutionize cable organization.'
+                  image: category_images/h7mRAL6Y8M5GZBILnCEoIfO0BUnYArYvrr1zqkXZ.png
+                  created_at: '2024-09-24T03:44:48.000000Z'
+                  updated_at: '2024-09-24T03:44:48.000000Z'
+                  product_lines:
+                    -
+                      id: 1
+                      category_id: 2
+                      name: 'Cable Tray'
+                      image: product_line_images/ktqxkytvXnOOOfbyB9jSjGN1kPLrCHqjj44ki6jQ.png
+                      created_at: '2024-10-13T10:36:42.000000Z'
+                      updated_at: '2024-10-13T10:36:42.000000Z'
+                      sub_categories:
+                        -
+                          id: 1
+                          product_line_id: 1
+                          name: Cables
+                          created_at: '2024-10-13T10:44:40.000000Z'
+                          updated_at: '2024-10-13T10:44:40.000000Z'
+                          products:
+                            -
+                              id: 1
+                              sub_category_id: 1
+                              title: product
+                              description: product
+                              created_at: '2024-10-13T10:44:53.000000Z'
+                              updated_at: '2024-10-13T10:44:53.000000Z'
+                              image: null
+                    -
+                      id: 2
+                      category_id: 2
+                      name: 'Cable Trunk'
+                      image: product_line_images/JU4d5zep3YsC0rRTTTshHHJFdcQhPFNrd1yc1XVS.png
+                      created_at: '2024-10-13T11:03:14.000000Z'
+                      updated_at: '2024-10-13T11:03:14.000000Z'
+                      sub_categories:
+                        -
+                          id: 2
+                          product_line_id: 2
+                          name: 'cable trunk'
+                          created_at: '2024-10-13T11:03:30.000000Z'
+                          updated_at: '2024-10-13T11:03:30.000000Z'
+                          products:
+                            -
+                              id: 2
+                              sub_category_id: 2
+                              title: product
+                              description: product
+                              created_at: '2024-10-13T11:03:36.000000Z'
+                              updated_at: '2024-10-13T11:03:36.000000Z'
+                              image: null
+                properties:
+                  id:
+                    type: integer
+                    example: 2
+                  category_name:
+                    type: string
+                    example: 'Cable Management System'
+                  description:
+                    type: string
+                    example: 'Explore our comprehensive range of cutting-edge cable management systems to streamline installation, enhance safety, and revolutionize cable organization.'
+                  image:
+                    type: string
+                    example: category_images/h7mRAL6Y8M5GZBILnCEoIfO0BUnYArYvrr1zqkXZ.png
+                  created_at:
+                    type: string
+                    example: '2024-09-24T03:44:48.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2024-09-24T03:44:48.000000Z'
+                  product_lines:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        category_id: 2
+                        name: 'Cable Tray'
+                        image: product_line_images/ktqxkytvXnOOOfbyB9jSjGN1kPLrCHqjj44ki6jQ.png
+                        created_at: '2024-10-13T10:36:42.000000Z'
+                        updated_at: '2024-10-13T10:36:42.000000Z'
+                        sub_categories:
+                          -
+                            id: 1
+                            product_line_id: 1
+                            name: Cables
+                            created_at: '2024-10-13T10:44:40.000000Z'
+                            updated_at: '2024-10-13T10:44:40.000000Z'
+                            products:
+                              -
+                                id: 1
+                                sub_category_id: 1
+                                title: product
+                                description: product
+                                created_at: '2024-10-13T10:44:53.000000Z'
+                                updated_at: '2024-10-13T10:44:53.000000Z'
+                                image: null
+                      -
+                        id: 2
+                        category_id: 2
+                        name: 'Cable Trunk'
+                        image: product_line_images/JU4d5zep3YsC0rRTTTshHHJFdcQhPFNrd1yc1XVS.png
+                        created_at: '2024-10-13T11:03:14.000000Z'
+                        updated_at: '2024-10-13T11:03:14.000000Z'
+                        sub_categories:
+                          -
+                            id: 2
+                            product_line_id: 2
+                            name: 'cable trunk'
+                            created_at: '2024-10-13T11:03:30.000000Z'
+                            updated_at: '2024-10-13T11:03:30.000000Z'
+                            products:
+                              -
+                                id: 2
+                                sub_category_id: 2
+                                title: product
+                                description: product
+                                created_at: '2024-10-13T11:03:36.000000Z'
+                                updated_at: '2024-10-13T11:03:36.000000Z'
+                                image: null
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        category_id:
+                          type: integer
+                          example: 2
+                        name:
+                          type: string
+                          example: 'Cable Tray'
+                        image:
+                          type: string
+                          example: product_line_images/ktqxkytvXnOOOfbyB9jSjGN1kPLrCHqjj44ki6jQ.png
+                        created_at:
+                          type: string
+                          example: '2024-10-13T10:36:42.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-10-13T10:36:42.000000Z'
+                        sub_categories:
+                          type: array
+                          example:
+                            -
+                              id: 1
+                              product_line_id: 1
+                              name: Cables
+                              created_at: '2024-10-13T10:44:40.000000Z'
+                              updated_at: '2024-10-13T10:44:40.000000Z'
+                              products:
+                                -
+                                  id: 1
+                                  sub_category_id: 1
+                                  title: product
+                                  description: product
+                                  created_at: '2024-10-13T10:44:53.000000Z'
+                                  updated_at: '2024-10-13T10:44:53.000000Z'
+                                  image: null
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 1
+                              product_line_id:
+                                type: integer
+                                example: 1
+                              name:
+                                type: string
+                                example: Cables
+                              created_at:
+                                type: string
+                                example: '2024-10-13T10:44:40.000000Z'
+                              updated_at:
+                                type: string
+                                example: '2024-10-13T10:44:40.000000Z'
+                              products:
+                                type: array
+                                example:
+                                  -
+                                    id: 1
+                                    sub_category_id: 1
+                                    title: product
+                                    description: product
+                                    created_at: '2024-10-13T10:44:53.000000Z'
+                                    updated_at: '2024-10-13T10:44:53.000000Z'
+                                    image: null
+                                items:
+                                  type: object
+                                  properties:
+                                    id:
+                                      type: integer
+                                      example: 1
+                                    sub_category_id:
+                                      type: integer
+                                      example: 1
+                                    title:
+                                      type: string
+                                      example: product
+                                    description:
+                                      type: string
+                                      example: product
+                                    created_at:
+                                      type: string
+                                      example: '2024-10-13T10:44:53.000000Z'
+                                    updated_at:
+                                      type: string
+                                      example: '2024-10-13T10:44:53.000000Z'
+                                    image:
+                                      type: string
+                                      example: null
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the category.'
+        example: 2
+        required: true
+        schema:
+          type: integer
+  '/api/categories/sub-categories/{id}':
+    get:
+      summary: ''
+      operationId: getApiCategoriesSubCategoriesId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  product_line_id: 1
+                  name: Cables
+                  created_at: '2024-10-13T10:44:40.000000Z'
+                  updated_at: '2024-10-13T10:44:40.000000Z'
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  product_line_id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: Cables
+                  created_at:
+                    type: string
+                    example: '2024-10-13T10:44:40.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2024-10-13T10:44:40.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putApiCategoriesSubCategoriesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: zxcservmpzvv
+                  nullable: false
+              required:
+                - name
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiCategoriesSubCategoriesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the sub category.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/categories/product-lines/{id}':
+    get:
+      summary: ''
+      operationId: getApiCategoriesProductLinesId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  category_id: 2
+                  name: 'Cable Tray'
+                  image: product_line_images/ktqxkytvXnOOOfbyB9jSjGN1kPLrCHqjj44ki6jQ.png
+                  created_at: '2024-10-13T10:36:42.000000Z'
+                  updated_at: '2024-10-13T10:36:42.000000Z'
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  category_id:
+                    type: integer
+                    example: 2
+                  name:
+                    type: string
+                    example: 'Cable Tray'
+                  image:
+                    type: string
+                    example: product_line_images/ktqxkytvXnOOOfbyB9jSjGN1kPLrCHqjj44ki6jQ.png
+                  created_at:
+                    type: string
+                    example: '2024-10-13T10:36:42.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2024-10-13T10:36:42.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiCategoriesProductLinesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: oeaedmsqiastnf
+                  nullable: false
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - name
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiCategoriesProductLinesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product line.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/categories/product-lines/{id}/subcategories':
+    post:
+      summary: ''
+      operationId: postApiCategoriesProductLinesIdSubcategories
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: uglwyq
+                  nullable: false
+                description:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: 'Laborum et sunt voluptate quia.'
+                  nullable: true
+              required:
+                - name
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product line.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/categories/product-lines/{categoryId}/subcategories':
+    get:
+      summary: ''
+      operationId: getApiCategoriesProductLinesCategoryIdSubcategories
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 1
+                    product_line_id: 1
+                    name: Cables
+                    created_at: '2024-10-13T10:44:40.000000Z'
+                    updated_at: '2024-10-13T10:44:40.000000Z'
+                    products:
+                      -
+                        id: 1
+                        sub_category_id: 1
+                        title: product
+                        description: product
+                        created_at: '2024-10-13T10:44:53.000000Z'
+                        updated_at: '2024-10-13T10:44:53.000000Z'
+                        image: null
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: categoryId
+        description: ''
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/categories/{categoryId}/product-lines':
+    post:
+      summary: ''
+      operationId: postApiCategoriesCategoryIdProductLines
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: wyvsvmnreitampxtdwugzz
+                  nullable: false
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - name
+      security: []
+    get:
+      summary: ''
+      operationId: getApiCategoriesCategoryIdProductLines
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 1
+                    category_id: 2
+                    name: 'Cable Tray'
+                    image: product_line_images/ktqxkytvXnOOOfbyB9jSjGN1kPLrCHqjj44ki6jQ.png
+                    created_at: '2024-10-13T10:36:42.000000Z'
+                    updated_at: '2024-10-13T10:36:42.000000Z'
+                  -
+                    id: 2
+                    category_id: 2
+                    name: 'Cable Trunk'
+                    image: product_line_images/JU4d5zep3YsC0rRTTTshHHJFdcQhPFNrd1yc1XVS.png
+                    created_at: '2024-10-13T11:03:14.000000Z'
+                    updated_at: '2024-10-13T11:03:14.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: categoryId
+        description: ''
+        example: 2
+        required: true
+        schema:
+          type: integer
+  '/api/products/{id}':
+    post:
+      summary: ''
+      operationId: postApiProductsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: naqh
+                  nullable: false
+                description:
+                  type: string
+                  description: 'Must not be greater than 2000 characters.'
+                  example: 'Consequatur neque ea inventore eligendi blanditiis iste.'
+                  nullable: false
+                images:
+                  type: array
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  items:
+                    type: string
+                    format: binary
+                    nullable: true
+              required:
+                - title
+                - description
+      security: []
+    get:
+      summary: ''
+      operationId: getApiProductsId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiProductsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/products:
+    get:
+      summary: ''
+      operationId: getApiProducts
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Server Error'
+                properties:
+                  message:
+                    type: string
+                    example: 'Server Error'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiProducts
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                sub_category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the sub_categories table.'
+                  example: mollitia
+                  nullable: false
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: adcchtdnelg
+                  nullable: false
+                description:
+                  type: string
+                  description: 'Must not be greater than 2000 characters.'
+                  example: 'Dolorum voluptatem consequatur et et voluptates maiores.'
+                  nullable: false
+                serial_number:
+                  type: string
+                  description: ''
+                  example: sunt
+                  nullable: false
+                images:
+                  type: array
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  items:
+                    type: string
+                    format: binary
+                    nullable: true
+              required:
+                - sub_category_id
+                - title
+                - description
+                - serial_number
+      security: []
+  /api/footer-images:
+    get:
+      summary: ''
+      operationId: getApiFooterImages
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example: []
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiFooterImages
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: false
+                alt_text:
+                  type: string
+                  description: ''
+                  example: eius
+                  nullable: true
+              required:
+                - image
+      security: []
+  '/api/footer-images/{id}':
+    delete:
+      summary: ''
+      operationId: deleteApiFooterImagesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the footer image.'
+        example: 9
+        required: true
+        schema:
+          type: integer
+  /api/contactus:
+    get:
+      summary: 'Get all contactus entries.'
+      operationId: getAllContactusEntries
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Create a new contactus entry.'
+      operationId: createANewContactusEntry
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: uwboankadmwtrmdwijiodp
+                  nullable: false
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: iwest@example.com
+                  nullable: false
+                subject:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: rchjshk
+                  nullable: false
+                message:
+                  type: string
+                  description: ''
+                  example: et
+                  nullable: false
+                attachment:
+                  type: string
+                  description: ''
+                  example: null
+                  nullable: true
+              required:
+                - name
+                - email
+                - subject
+                - message
+      security: []
+  /api/whychooseus:
+    get:
+      summary: ''
+      operationId: getApiWhychooseus
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example: []
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiWhychooseus
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: uoa
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: 'Quisquam quas veritatis magnam quis.'
+                  nullable: false
+              required:
+                - title
+                - description
+      security: []
+  '/api/whychooseus/{id}':
+    delete:
+      summary: ''
+      operationId: deleteApiWhychooseusId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the whychooseu.'
+        example: animi
+        required: true
+        schema:
+          type: string
+tags:
+  -
+    name: Endpoints
+    description: ''
